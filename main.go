@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/wnow20/file-unify/cmd"
+	"github.com/wnow20/unify/cmd"
 )
 
 func main() {
