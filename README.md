@@ -13,7 +13,7 @@ unify -s GB-18030 -t UTF8 -x .java -p /Users/ge/workspace/bc/businesscenter
 ### unify 文件编码检测
 ```shell
 # 支持相对路径、绝对路径
-./unify detect -f cmd/test4gbk.txt
+unify detect -f cmd/test4gbk.txt
 ```
 
 ## How to install
