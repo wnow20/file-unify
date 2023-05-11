@@ -1,7 +1,7 @@
 package main
 
 import (
-	"text-encoding/cmd"
+	"github.com/wnow20/unify/cmd"
 )
 
 func main() {

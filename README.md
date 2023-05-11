@@ -12,5 +12,5 @@ unify -s GB-18030 -t UTF8 -x .java -p /Users/ge/workspace/bc/businesscenter
 
 ## How to install
 ```shell
-GOPROXY=https://goproxy.cn/,direct go install github.com:wnow20/file-unify@latest
+GOPROXY=https://goproxy.cn/,direct go install github.com/wnow20/file-unify@latest
 ```
