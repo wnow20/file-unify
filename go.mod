@@ -1,4 +1,4 @@
-module github.com/wnow20/unify
+module github.com/wnow20/file-unify
 
 go 1.20
 
