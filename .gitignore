@@ -1,2 +1,7 @@
 .idea
 unify
+
+bin/unify
+bin/unify.exe
+bin/unify-darwin
+bin/unify-linux
