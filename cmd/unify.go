@@ -21,13 +21,9 @@ var charsetMap = make(map[string]encoding.Encoding)
 
 var detector *chardet.Detector
 
-func defaultRootPath() string {
-	ex, err := os.Executable()
-	if err != nil {
-		panic(err)
-	}
-	exPath := filepath.Dir(ex)
-	return exPath
+func defaultRootPath() (root string, err error) {
+	root, err = os.Getwd()
+	return
 }
 
 var unifyCmd = &cobra.Command{
@@ -111,8 +107,12 @@ func forwardByte(b byte) bool {
 
 func unifyDir(cmd *cobra.Command, args []string) {
 	root := rootPath
-	if len(rootPath) == 0 {
-		root = defaultRootPath()
+	if len(root) == 0 {
+		r, err := defaultRootPath()
+		if err != nil {
+			panic(err)
+		}
+		root = r
 	}
 
 	log.Println("rootPath", root)

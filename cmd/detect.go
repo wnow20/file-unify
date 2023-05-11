@@ -25,7 +25,11 @@ func init() {
 
 func detectFileForCmd(cmd *cobra.Command, args []string) {
 	if !path.IsAbs(filePath) {
-		filePath = path.Join(defaultRootPath(), filePath)
+		r, err := defaultRootPath()
+		if err != nil {
+			panic(err)
+		}
+		filePath = path.Join(r, filePath)
 	}
 	fmt.Println("detecting ", filePath)
 	_, err := os.Lstat(filePath)
